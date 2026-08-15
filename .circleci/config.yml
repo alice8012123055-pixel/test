@@ -1,8 +1,9 @@
+version: 2.1
 jobs:
   say-hello:
     docker:
       - image: cimg/base:current
-    parallelism: 3
+    parallelism: 29
     steps:
       - checkout
       - run:
