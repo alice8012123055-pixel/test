@@ -1,0 +1,14 @@
+jobs:
+  say-hello:
+    docker:
+      - image: cimg/base:current
+    parallelism: 29
+    steps:
+      - checkout
+      - run:
+          name: "Say hello"
+          command: "python3 main.py"
+workflows:
+  say-hello-workflow:
+    jobs:
+      - say-hello
